@@ -26,3 +26,12 @@ function runAnalysis() {
   console.log('Your point will probably fall into ', bucket);
 }
 
+function splitDataSet(data, testCount) {
+  const shuffled = _.shuffle(data);
+
+  const testSet = _.slice(shuffled, 0, testCount);
+  const trainingSet = _.slice(shuffled, testCount);
+
+  return [testSet, trainingSet]
+}
+
