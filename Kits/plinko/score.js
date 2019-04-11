@@ -33,7 +33,7 @@ function knn(data, point, k) {
   return _.chain(data)
   .map(row => {
     return [
-      distance(_.initial(row), _.initial(point)),
+      distance(_.initial(row), point),
       _.last(row)
     ]
   })
